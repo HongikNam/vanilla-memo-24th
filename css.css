@@ -472,8 +472,11 @@ header {
 }
 
 .empty-grid p,
-.search-empty p {
+.search-empty {
     margin: 0;
+    border: 2px dashed var(--blue07);
+    height: 710px;
+
 }
 
 .search-empty h2 {
