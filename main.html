@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla Memo</title>
+    <link rel="stylesheet" href="/css.css" (type="text/css")>
+</head>
+<body>
+    <!--검색창-->
+    <header>
+        <div class="search-bar">
+            <div class="search-picker" id="searchPicker">
+                <button id="searchPickerBtn" type="button">
+                    <span id="searchPickerLabel">태그 선택</span>
+                    <span class="chev">▶</span>
+                </button>
+                <div class="tag-menu" id="tagMenu"></div>
+            </div>
+
+            <input type="text" class="search-input" id="searchInput"
+                placeholder="원하는 메모를 검색하세요.">
+            <button class="icon-search">
+                <img src="/돋.svg" alt="">
+            </button>
+        </div>
+
+        <button class="icon-plus" id="addBtn">+</button>
+        <button class="icon-person">
+            <img src="/Vector.svg" alt="">
+        </button>
+    </header>
+
+    <main>
+        <!--메모가 없을 때-->
+        <div class="empty-grid" id="emptyGrid">
+            <p>새로운 메모를 작성해보세요!</p>
+        </div>
+        <!--검색결과가 없을떄-->
+        <div class="search-empty" id="searchEmpty">
+            <h2>검색결과가 없습니다</h2> 
+            <p>다른 검색어로 다시 시도해보세요</p>
+        </div>
+        <!--메모가 들어갈 장소 document.getElementById('memoGrid')를 이용해서 memoGrid.innerHTML = ...로 밀어넣을 예정-->
+        <div class="memo-grid" id="memoGrid"></div> 
+    
+
+        <!--모달 팝업-->
+        <div class="modal" id="modal">
+            <div class="modal-contents" id="modalContents">
+                <header>
+                    <h2 class="modal-title" id="modalTitle"></h2>
+                    <button class="popup-close" id="popupClose"><img src="/Exit.svg" alt="닫기"></button>
+                </header>
+                <body>
+                    <div class="modal-meta">
+                        <span class="modal-tag" id="modalTag"></span>
+                        <span class="modal-divider"><img src="/Vector 2.svg"></span>
+                        <span class="modal-date" id="modalDate"></span>
+                    </div>
+                        <p class="modal-content" id="modalContent"></p>
+                </body>
+                <footer>
+                    <div class="modal-actions">
+                        <button class="popup-modify" id="popupModify"><img src="/edit.svg" alt="수정"></button>
+                        <button class="popup-delete" id="popupDelete"><img src="/trash.svg" alt="삭제"></button>
+                    </div>
+                </footer>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+<script src="/js.js"></script>
+</body>
+</html>
